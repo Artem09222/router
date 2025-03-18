@@ -1,0 +1,94 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+    margin-left: 250px;
+}
+
+.title {
+    font-size: 28px;
+    color: #ffcc00;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ffcc00;
+    border-radius: 8px;
+    outline: none;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.input:focus {
+    border-color: #ff6600;
+    background-color: #333;
+    color: white;
+}
+
+.loading {
+    font-size: 18px;
+    color: #ffcc00;
+    margin-top: 10px;
+}
+
+.movieList {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.movieItem {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    text-align: center;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.movieItem:hover {
+    background-color: #ff6600;
+}
+
+.backButton {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    color: #ffcc00;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.backButton:hover {
+    color: #ff6600;
+}
+
+.backButton::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-left: 4px solid #ffcc00; 
+    border-bottom: 4px solid #ffcc00; 
+    transform: rotate(45deg);
+    transition: border-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.backButton:hover::before {
+    border-color: #ff6600;
+    transform: rotate(45deg) scale(1.2);
+}

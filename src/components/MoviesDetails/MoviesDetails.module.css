@@ -1,0 +1,72 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.divDetails {
+    max-width: 600px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-left: 220px;
+}
+
+.title {
+    font-size: 24px;
+    color: #333;
+}
+
+.poster {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.overview {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.rating, .release {
+    font-size: 18px;
+    font-weight: bold;
+    color: #222;
+}
+
+.backButton {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    color: #ffcc00;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.backButton:hover {
+    color: #ff6600;
+}
+
+.backButton::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-left: 4px solid #ffcc00; 
+    border-bottom: 4px solid #ffcc00; 
+    transform: rotate(45deg);
+    transition: border-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.backButton:hover::before {
+    border-color: #ff6600;
+    transform: rotate(45deg) scale(1.2);
+}
