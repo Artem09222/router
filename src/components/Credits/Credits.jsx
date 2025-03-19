@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { gettingActors } from "../services/MoviesDetailsAPI";
 import { useParams } from "react-router-dom";
 import module from './Credits.module.css';
+import PropTypes from "prop-types";
 
 const Credits = () => {
     const [actors, setActors] = useState([]);
@@ -32,3 +33,9 @@ const Credits = () => {
 }
 
 export default Credits
+
+Credits.propTypes = {
+    actors: PropTypes.shape({
+        name: PropTypes.string
+    })
+}

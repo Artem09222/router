@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./Movies.module.css"; 
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 function Movies() {
     const [query, setQuery] = useState("");
@@ -59,3 +60,9 @@ function Movies() {
 }
 
 export default Movies;
+
+Movies.propTypes = {
+    api: PropTypes.shape({
+        title: PropTypes.string
+    })
+}

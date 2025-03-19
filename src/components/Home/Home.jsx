@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getFetchedMovies } from "../services/HomeAPI";
+import PropTypes from "prop-types";
 import styles from "./Home.module.css"; 
 
 function Home() {
@@ -12,7 +13,7 @@ function Home() {
     useEffect(() => {
         async function fetchData() {
             setLoading(true);
-            const fetchDatas = await getFetchedMovies();
+            const fetchDatas = await getFetchedMovies(page);
             console.log("Fetched Movies in Home:", fetchDatas);
             setHome(fetchDatas);
             if (fetchDatas) {
@@ -44,13 +45,10 @@ function Home() {
         
                             {totalPages && (
                                 <div className={styles.pagination}>
-                                    <button disabled={page === 1} onClick={() => setPage((perPage) => perPage - 1)}>
+                                    <button disabled={page === 1} onClick={() => setPage((prev) => prev - 1)}>
                                         Назад
                                     </button>
-                                    <span>
-                                        Сторінка {page} з {totalPages}
-                                    </span>
-                                    <button disabled={page >= totalPages} onClick={() => setPage((per) => per + 1)}>
+                                    <button disabled={page >= totalPages} onClick={() => setPage((prev) => prev + 1)}>
                                         Вперед
                                     </button>
                                 </div>
@@ -63,3 +61,9 @@ function Home() {
 }
 
 export default Home;
+
+Home.propTypes = {
+    home: PropTypes.shape({
+        title: PropTypes.string
+    })
+}
