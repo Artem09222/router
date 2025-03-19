@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { getFetchedMovies } from "../services/HomeAPI";
 import PropTypes from "prop-types";
 import styles from "./Home.module.css"; 
+import { getFetchedMovies } from "../services/MoviesDetailsAPI";
 
 function Home() {
     const [home, setHome] = useState([]);

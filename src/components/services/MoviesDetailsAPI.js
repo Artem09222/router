@@ -30,3 +30,17 @@ export const gettingActors = async function(movieId) {
         return [];
     }
 }
+
+export const getFetchedMovies = async function(page = 1) {
+    try {
+        const response = await axios.get(`${API_URL}/trending/movie/week`, {
+            params: {
+                api_key: API_KEY,
+                page,
+            }
+        })
+        return response.data;
+    } catch (error) {
+        console.log(error);
+    }
+}
