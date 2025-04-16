@@ -1,1 +1,0 @@
-import{j as n,L as s}from"./index-BHXLxoKL.js";const e="_nav_1jsn0_1",o={nav:e};function t(){return n.jsxs("nav",{className:o.nav,children:[n.jsx(s,{to:"/",children:"Home"}),n.jsx(s,{to:"/movies",children:"Movies"})]})}export{t as default};
